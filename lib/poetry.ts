@@ -19,7 +19,7 @@ export async function getSortedPoetryData() {
       .process(matterResult.content)
     const contentHtml = processedContent.toString()
 
-    const snippet = contentHtml.substring(0, 300).concat("...")
+    const snippet = contentHtml.substring(0, 100).concat("...")
 
     return {  
       id,

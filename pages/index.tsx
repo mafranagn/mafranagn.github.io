@@ -22,7 +22,7 @@ export default function Home({
       </Head>
       <section className={utilStyles.sectionPadding}>
         {allPoetryData.map(({ id, date, title, snippet }) => (
-          <Poem content={{ id, date, title, snippet }} />
+          <Poem key={id} content={{ id, date, title, snippet }} />
         ))}
       </section>
     </Layout>

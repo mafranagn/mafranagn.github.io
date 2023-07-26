@@ -31,7 +31,7 @@ export default function Poem({
                 <Date dateString={content.date} />
             </p>
             <div className={styles.poemContent} dangerouslySetInnerHTML={{ __html: content.snippet }} />
-            <Link className={styles.readMoreButton} href={`/poetry/${content.id}`}>Read More</Link>
+            <Link className={styles.readMoreButton} href={`/poetry/${content.id}`}>Read More →</Link>
         </motion.div>
   )
 }

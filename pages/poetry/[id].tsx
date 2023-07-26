@@ -24,7 +24,7 @@ export default function Publication({
         <div className={utilStyles.lightText}>
           <Date dateString={poetryData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: poetryData.contentHtml }} />
+        <div className={utilStyles.body} dangerouslySetInnerHTML={{ __html: poetryData.contentHtml }} />
       </article>
     </Layout>
   )

@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import { useInView } from "framer-motion"
 import { useRef } from 'react'
@@ -34,12 +33,12 @@ export default function Layout({
                   opacity: isInView ? 1 : 0, 
                   transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                 }}
-                className={utilStyles.heading2Xl}>{siteTitle}</h1>
+                className={styles.siteTitle}>{siteTitle}</h1>
             </>
           ) : (
             <>
-              <h2 className={utilStyles.headingLg}>
-                <Link href="/" className={utilStyles.colorInherit}>
+              <h2 className={styles.siteTitleSmall}>
+                <Link href="/">
                   {siteTitle}
                 </Link>
               </h2>

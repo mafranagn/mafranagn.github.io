@@ -15,7 +15,7 @@ export async function getSortedPoetryData() {
     const matterResult = matter(fileContents)
 
     const processedContent = await remark()
-      .use(html)
+      .use(html, { sanitize: false })
       .process(matterResult.content)
     const contentHtml = processedContent.toString()
 
@@ -48,7 +48,7 @@ export async function getPoetryData(id: string) {
   const matterResult = matter(fileContents)
 
   const processedContent = await remark()
-    .use(html)
+    .use(html, { sanitize: false })
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
